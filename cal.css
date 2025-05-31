@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+* {
+  font-family: 'Orbitron', sans-serif;
+}
+
+
 *{
     margin :0;
     padding: 0;
@@ -17,11 +24,11 @@ body{
 .maincont{
     border: 2px solid black;
     border-radius: 30px;
-    box-shadow: 0 0 0 10px rgb(35, 34, 34);
+    box-shadow: 0 0 0 10px black;
     /* padding: 20px; */
-   height: 700px;
-   width: 412px;
-   /* display: flex; */
+   height: 676px;
+   width: 400px;
+   /* display: 7flex; */
 /* text-align: center; */
 /* flex-direction: row; */
 
@@ -32,9 +39,9 @@ input{
     /* margin-left: 50px; */
         outline: none;
     margin: 10px;
-    height: 200px;
+    height: 190px;
     width: 80%;
-    padding: 20px;
+    padding: 10px;
     /* box-shadow: inset 0 0 0 8px rgb(23, 22, 22); */
     font-size: 40px;
     box-sizing: border-box;
@@ -61,25 +68,26 @@ button{
     font-weight: bold; 
     cursor: pointer; 
     box-shadow: 0 0 0 2px rgb(48, 47, 47);
-    
+      transition: transform 0.3s ease;
+
     
     
      
 }
 button:hover{
     color: azure;
-    background-color: rgb(85, 8, 130);
+     transform: scale(1.01) translateY(-3px);
+    background-color: rgb(230, 180, 14);
 }
 .element{
     background-color: black;
     width: 100%;
     padding-bottom: 34px;
     padding-left: 16px;
-    
+    height: 473px;
     /* padding-left: 16px; */
     /* display: flex; */
     /* flex-direction: row; */
-
     /* padding: 20px; */
     ;
     border-bottom-right-radius: 35px;
@@ -92,5 +100,5 @@ button:hover{
     /* margin-left: ; */
     width: 150px;
     border-radius: 10px;
-
+    background-color: rgb(110, 230, 244);
 }

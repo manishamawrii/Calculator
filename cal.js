@@ -12,14 +12,13 @@ arraList.forEach((but)=>{
  but.addEventListener("click" ,(e)=>
  {
    
-     if(e.target.innerHTML=="del"){
-        console.log(string.length)
-        // console.log(typeof(btn))
-        console.log(typeof(e.target.innerHTML))
-        string = string.substring(0,string.length-1);
-        console.log(string.length)
-        input.value= string;
-    }
+     if (e.target.innerHTML == "del") {
+  if (string.length > 0) {
+    string = string.substring(0, string.length - 1);
+    input.value = string;
+  }
+}
+
     
     else if(e.target.innerHTML=="ac"){
         
@@ -39,15 +38,17 @@ arraList.forEach((but)=>{
         let lastChar = string.slice(-1);
         console.log("last char" +lastChar)
         let operators = ["+" , "-" ,"/" , "*" ]
-        let operatorss = [ "/" , "*" ]
-        if(operators.includes(lastChar)&&operators.includes(e.target.innerHTML))
+        let currentChar= e.target.innerHTML;
+        if(operators.includes(lastChar)&&operators.includes(currentChar))
+
         {
-            input.value = "error";
+            string= string.slice(0,-1)+currentChar;
+            input.value = string;
             
 
         }
         
-          else if(operatorss.includes(e.target.innerHTML)&&input.value.length===0){
+          else if((currentChar==="/"||currentChar=="*")&&string.length===0){
             input.value="error"
           }
       
